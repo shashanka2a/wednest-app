@@ -27,13 +27,15 @@ export const HomePage = () => {
     <>
       {/* Hero Section */}
       <section className="relative min-h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden bg-white px-4">
-        {/* Background Image */}
+        {/* Background Image with subtle radial blur */}
         <div className="absolute inset-0">
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{
               backgroundImage: 'url(/bg.png)',
               opacity: 0.4,
+              maskImage: 'radial-gradient(ellipse at center, transparent 15%, black 50%)',
+              WebkitMaskImage: 'radial-gradient(ellipse at center, transparent 15%, black 50%)',
             }}
           />
         </div>
