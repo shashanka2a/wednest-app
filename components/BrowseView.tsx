@@ -3,10 +3,20 @@
 import React, { useState, useMemo } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Search, MapPin, ChevronDown, Utensils, X, Check } from 'lucide-react';
+import { Icon } from '@iconify/react';
 import { motion } from 'framer-motion';
 import { VendorCard } from './VendorCard';
 import { ALL_VENDORS, CITIES, CATEGORIES } from '../lib/constants';
 import { containerStagger, itemFadeUp } from '../lib/animations';
+
+// Solar icons mapping for categories
+const CATEGORY_ICONS: Record<string, string> = {
+  'Venue': 'solar:home-2-bold',
+  'Photography': 'solar:camera-bold',
+  'Makeup': 'solar:cosmetic-bold',
+  'Decor': 'solar:flower-bold',
+  'Catering': 'solar:restaurant-bold',
+};
 
 export const BrowseView = () => {
   const searchParams = useSearchParams();
@@ -116,22 +126,32 @@ export const BrowseView = () => {
       <div className="sticky top-16 md:top-20 z-30 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm py-3 transition-all">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex gap-3 overflow-x-auto hide-scrollbar">
-             {CATEGORIES.map(cat => (
-               <motion.button
-                  key={cat.name}
-                  whileHover={{ scale: 1.05, backgroundColor: selectedCategory !== cat.name ? '#FDF8F5' : undefined }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => setSelectedCategory(selectedCategory === cat.name ? '' : cat.name)}
-                  className={`px-5 py-2.5 rounded-full text-sm font-semibold whitespace-nowrap border transition-all flex items-center gap-2 ${
-                    selectedCategory === cat.name 
-                      ? 'bg-rose-600 text-white border-rose-600 shadow-md' 
-                      : 'bg-white text-gray-600 border-gray-200 hover:border-rose-300 hover:bg-rose-50/50'
-                  }`}
-               >
-                 {selectedCategory === cat.name && <Check size={14} />}
-                 {cat.name}
-               </motion.button>
-             ))}
+             {CATEGORIES.map(cat => {
+               const isSelected = selectedCategory === cat.name;
+               const iconName = CATEGORY_ICONS[cat.name] || 'solar:star-bold';
+               
+               return (
+                 <motion.button
+                    key={cat.name}
+                    whileHover={{ scale: 1.05, backgroundColor: !isSelected ? '#FDF8F5' : undefined }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={() => setSelectedCategory(isSelected ? '' : cat.name)}
+                    className={`px-4 py-2.5 rounded-xl text-sm font-semibold whitespace-nowrap border-2 transition-all flex items-center gap-2 ${
+                      isSelected 
+                        ? 'bg-rose-600 text-white border-rose-600 shadow-md' 
+                        : 'bg-white text-gray-600 border-gray-200 hover:border-rose-300 hover:bg-rose-50/50'
+                    }`}
+                 >
+                   <Icon 
+                     icon={iconName} 
+                     width={18} 
+                     height={18}
+                     className={isSelected ? 'text-white' : 'text-gray-600'}
+                   />
+                   {cat.name}
+                 </motion.button>
+               );
+             })}
           </div>
         </div>
       </div>

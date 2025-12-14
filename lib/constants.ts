@@ -1,4 +1,4 @@
-import { Home, Camera, Wand2, IndianRupee } from 'lucide-react';
+import { Home, Camera, Wand2, IndianRupee, Utensils } from 'lucide-react';
 import { Vendor, VendorCategory } from '../types';
 
 export const CITIES = [
@@ -13,6 +13,7 @@ export const CATEGORIES = [
   { name: 'Photography', icon: Camera, color: 'text-blue-600', bg: 'bg-blue-100', keywords: ['Studio', 'Captures', 'Films', 'Lens', 'Moments'] },
   { name: 'Makeup', icon: Wand2, color: 'text-rose-600', bg: 'bg-rose-100', keywords: ['Makeover', 'Artistry', 'Glamour', 'Beauty', 'Looks'] },
   { name: 'Decor', icon: IndianRupee, color: 'text-yellow-600', bg: 'bg-yellow-100', keywords: ['Events', 'Decor', 'Designs', 'Creations', 'Styling'] },
+  { name: 'Catering', icon: Utensils, color: 'text-green-600', bg: 'bg-green-100', keywords: ['Veg', 'Non-Veg', 'Buffet', 'Plated', 'Service'] },
 ];
 
 // Helper to generate consistent mock data
@@ -42,6 +43,12 @@ export const generateVendors = (): Vendor[] => {
       'https://images.unsplash.com/photo-1478146896981-b80c463e4381?auto=format&fit=crop&q=80&w=800',
       'https://images.unsplash.com/photo-1530103862676-de3c9a59aa38?auto=format&fit=crop&q=80&w=800',
       'https://images.unsplash.com/photo-1501612780327-45045538702b?auto=format&fit=crop&q=80&w=800'
+    ],
+    Catering: [
+      'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=800'
     ]
   };
 
@@ -52,7 +59,7 @@ export const generateVendors = (): Vendor[] => {
       // 5 vendors per category per city
       for (let i = 0; i < 5; i++) {
         const keyword = cat.keywords[i] || cat.keywords[0];
-        const basePrice = cat.name === 'Venue' ? 50000 : cat.name === 'Photography' ? 25000 : cat.name === 'Makeup' ? 15000 : 30000;
+        const basePrice = cat.name === 'Venue' ? 50000 : cat.name === 'Photography' ? 25000 : cat.name === 'Makeup' ? 15000 : cat.name === 'Catering' ? 40000 : 30000;
         
         vendors.push({
           id: String(idCounter++),
