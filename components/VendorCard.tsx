@@ -43,11 +43,11 @@ export const VendorCard: React.FC<VendorCardProps> = ({ vendor }) => {
         </div>
       </div>
       
-      <div className="p-4 flex flex-col flex-grow">
-        <div className="flex justify-between items-start mb-2">
-          <div>
-            <h3 className="text-lg font-bold text-gray-800 truncate group-hover:text-rose-600 transition-colors">{vendor.name}</h3>
-            <p className="text-rose-500 text-sm font-medium">{vendor.category}</p>
+      <div className="p-4 flex flex-col flex-grow min-w-0">
+        <div className="flex justify-between items-start mb-2 min-w-0">
+          <div className="min-w-0 flex-1">
+            <h3 className="text-lg font-bold text-gray-800 truncate group-hover:text-rose-600 transition-colors" title={vendor.name}>{vendor.name}</h3>
+            <p className="text-rose-500 text-sm font-medium truncate">{vendor.category}</p>
           </div>
         </div>
         

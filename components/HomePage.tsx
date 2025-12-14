@@ -6,7 +6,7 @@ import { Search, MapPin, ArrowRight, Wand2, Bot, Instagram, Facebook, Twitter, M
 import { motion } from 'framer-motion';
 import { PopularCities } from './PopularCities';
 import { VendorCard } from './VendorCard';
-import { ALL_VENDORS, CITIES } from '../lib/constants';
+import { ALL_VENDORS, CITIES, NIZAMABAD_REAL_VENUES } from '../lib/constants';
 import { containerStagger, itemFadeUp } from '../lib/animations';
 
 export const HomePage = () => {
@@ -42,13 +42,13 @@ export const HomePage = () => {
             >
               #1 Marketplace for Telangana Tier 2 & 3 Cities
             </motion.span>
-            <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-gray-900 leading-tight mb-8">
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
               Your Dream Wedding, <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-rose-700 italic pr-2">
                 Within Budget.
               </span>
             </h1>
-            <p className="text-lg md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base md:text-lg text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
               Discover trusted local vendors in Nizamabad, Warangal, and beyond. Verified professionals, transparent pricing.
             </p>
 
@@ -120,7 +120,7 @@ export const HomePage = () => {
             viewport={{ once: true, margin: "-50px" }}
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
           >
-            {ALL_VENDORS.filter(v => v.city === 'Nizamabad').slice(0, 4).map(vendor => (
+            {NIZAMABAD_REAL_VENUES.slice(0, 4).map(vendor => (
               <motion.div variants={itemFadeUp} key={vendor.id}>
                 <VendorCard vendor={vendor} />
               </motion.div>

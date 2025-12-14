@@ -2,10 +2,10 @@ import { Home, Camera, Wand2, IndianRupee } from 'lucide-react';
 import { Vendor, VendorCategory } from '../types';
 
 export const CITIES = [
-  { name: 'Nizamabad', image: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&q=80&w=600&h=400', label: 'Historical Forts' },
-  { name: 'Warangal', image: 'https://images.unsplash.com/photo-1598979339463-b1d5f36e4f9b?auto=format&fit=crop&q=80&w=600&h=400', label: 'Cultural Capital' },
-  { name: 'Karimnagar', image: 'https://images.unsplash.com/photo-1626544827763-d516dce335ca?auto=format&fit=crop&q=80&w=600&h=400', label: 'City of Granites' }, 
-  { name: 'Kamareddy', image: 'https://images.unsplash.com/photo-1582560475093-4531852d4dc8?auto=format&fit=crop&q=80&w=600&h=400', label: 'Heritage & Agriculture' },
+  { name: 'Nizamabad', image: '/nzb.png', label: 'Historical Forts' },
+  { name: 'Warangal', image: '/wrngl.png', label: 'Cultural Capital' },
+  { name: 'Karimnagar', image: '/krnmngr.png', label: 'City of Granites' }, 
+  { name: 'Kamareddy', image: '/kmrdy.png', label: 'Heritage & Agriculture' },
 ];
 
 export const CATEGORIES = [
@@ -71,6 +71,54 @@ export const generateVendors = (): Vendor[] => {
 
   return vendors;
 };
+
+// Real Nizamabad Venues
+export const NIZAMABAD_REAL_VENUES: Vendor[] = [
+  {
+    id: 'nzb-1',
+    name: 'G Convention',
+    category: VendorCategory.VENUE,
+    city: 'Nizamabad',
+    rating: 4.5,
+    reviewCount: 128,
+    priceStart: 65000,
+    imageUrl: '/venues/g-convention.png',
+    verified: true,
+  },
+  {
+    id: 'nzb-2',
+    name: 'Sri Rama Gardens',
+    category: VendorCategory.VENUE,
+    city: 'Nizamabad',
+    rating: 4.7,
+    reviewCount: 95,
+    priceStart: 58000,
+    imageUrl: '/venues/srirama.png',
+    verified: true,
+  },
+  {
+    id: 'nzb-3',
+    name: 'Bhooma Reddy Convention Centre',
+    category: VendorCategory.VENUE,
+    city: 'Nizamabad',
+    rating: 4.4,
+    reviewCount: 87,
+    priceStart: 68000,
+    imageUrl: '/venues/bhoomareddy.png',
+    verified: true,
+  },
+  {
+    id: 'nzb-4',
+    name: 'Sri Kanyaka Parameshwari Kalyana Mandapam',
+    category: VendorCategory.VENUE,
+    city: 'Nizamabad',
+    rating: 4.8,
+    reviewCount: 203,
+    priceStart: 55000,
+    imageUrl: '/venues/sri-kanyaka.png',
+    verified: true,
+  },
+];
 
 export const ALL_VENDORS = generateVendors();
 
