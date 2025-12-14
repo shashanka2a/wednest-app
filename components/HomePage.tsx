@@ -34,7 +34,6 @@ export const HomePage = () => {
             style={{
               backgroundImage: 'url(/image.png)',
               opacity: 0.4,
-              filter: 'blur(40px)',
               maskImage: 'radial-gradient(ellipse at center, transparent 30%, black 70%)',
               WebkitMaskImage: 'radial-gradient(ellipse at center, transparent 30%, black 70%)',
             }}
