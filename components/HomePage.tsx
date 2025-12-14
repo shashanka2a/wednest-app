@@ -241,11 +241,11 @@ export const HomePage = () => {
             </div>
 
             <div>
-              <h4 className="font-bold text-lg mb-6">Nizamabad, Telangana</h4>
+              <h4 className="font-bold text-lg mb-6">Contact Us</h4>
               <ul className="space-y-4 text-gray-400 text-sm">
                 <li className="flex items-start gap-3">
                   <MapPin size={18} className="mt-0.5 shrink-0" />
-                  <span>Warangal, Telangana</span>
+                  <span>Nizamabad, Telangana</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Phone size={18} />

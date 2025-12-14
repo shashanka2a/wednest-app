@@ -16,6 +16,7 @@ const CATEGORY_ICONS: Record<string, string> = {
   'Makeup': 'solar:cosmetic-bold',
   'Decor': 'solar:flower-bold',
   'Catering': 'solar:restaurant-bold',
+  'Designers': 'solar:palette-bold',
 };
 
 export const BrowseView = () => {
@@ -133,22 +134,21 @@ export const BrowseView = () => {
                return (
                  <motion.button
                     key={cat.name}
-                    whileHover={{ scale: 1.05, backgroundColor: !isSelected ? '#FDF8F5' : undefined }}
                     whileTap={{ scale: 0.95 }}
                     onClick={() => setSelectedCategory(isSelected ? '' : cat.name)}
                     className={`px-4 py-2.5 rounded-xl text-sm font-semibold whitespace-nowrap border-2 transition-all flex items-center gap-2 ${
                       isSelected 
-                        ? 'bg-rose-600 text-white border-rose-600 shadow-md' 
-                        : 'bg-white text-gray-700 border-gray-200 hover:border-rose-300 hover:bg-rose-50/50'
+                        ? 'bg-rose-100 text-rose-700 border-rose-300 shadow-md' 
+                        : 'bg-white text-gray-700 border-gray-200 hover:border-rose-300 hover:bg-rose-50/50 hover:text-gray-700'
                     }`}
                  >
                    <Icon 
                      icon={iconName} 
                      width={18} 
                      height={18}
-                     className={isSelected ? 'text-white' : 'text-gray-700'}
+                     className={isSelected ? 'text-rose-700' : 'text-gray-700 hover:text-gray-700'}
                    />
-                   <span className={isSelected ? 'text-white' : 'text-gray-700'}>{cat.name}</span>
+                   <span className={isSelected ? 'text-rose-700' : 'text-gray-700 hover:text-gray-700'}>{cat.name}</span>
                  </motion.button>
                );
              })}
