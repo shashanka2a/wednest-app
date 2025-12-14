@@ -32,10 +32,14 @@ export const Header = () => {
             
             <motion.button 
               whileHover={{ scale: 1.05 }}
-              className={`px-4 py-2 rounded-full font-medium transition-colors flex items-center gap-1.5 ${isActive('/ai') ? 'text-rose-600 bg-rose-50' : 'text-gray-600 hover:text-rose-600'}`}
+              className={`px-4 py-2 rounded-full font-medium transition-colors flex items-center gap-1.5 relative ${isActive('/ai') ? 'text-rose-600 bg-rose-50' : 'text-gray-600 hover:text-rose-600'}`}
             >
               <Link href="/ai" className="flex items-center gap-1.5">
-                <Wand2 size={16} /> Plan with AI
+                <Wand2 size={16} className="fill-rose-500/20" />
+                <span className="bg-gradient-to-r from-rose-600 to-rose-500 bg-clip-text text-transparent font-semibold">
+                  Plan with AI
+                </span>
+                <span className="text-xs">✨</span>
               </Link>
             </motion.button>
 
@@ -52,7 +56,7 @@ export const Header = () => {
             <motion.a 
               href="#"
               whileHover={{ x: 2 }}
-              className="text-gray-500 font-medium text-sm hover:text-rose-600 transition-colors hidden lg:block"
+              className="text-gray-500 font-medium text-sm hover:text-rose-600 transition-colors hidden lg:block flex items-center"
             >
               List your Business
             </motion.a>
@@ -60,9 +64,9 @@ export const Header = () => {
             <motion.button 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-rose-500 text-white px-6 py-2.5 rounded-full font-medium hover:bg-rose-600 transition shadow-lg shadow-rose-200/50"
+              className="bg-rose-500 text-white px-6 py-2.5 rounded-full font-medium hover:bg-rose-600 transition shadow-lg shadow-rose-200/50 flex items-center"
             >
-              <Link href="/account">Sign In</Link>
+              <Link href="/account" className="flex items-center">Sign In</Link>
             </motion.button>
           </div>
 

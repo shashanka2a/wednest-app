@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import { Search, MapPin, ArrowRight, Wand2, Bot, Instagram, Facebook, Twitter, Mail, Phone } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { PopularCities } from './PopularCities';
@@ -199,9 +200,13 @@ export const HomePage = () => {
           <div className="grid md:grid-cols-4 gap-12 mb-16">
             <div>
               <div className="flex items-center gap-2 mb-6">
-                <div className="flex items-center justify-center w-8 h-8 border border-white/30 rounded-full">
-                  <span className="font-serif text-lg italic font-bold pb-1">w</span>
-                </div>
+                <Image 
+                  src="/icon.svg" 
+                  alt="WedNest Logo" 
+                  width={32} 
+                  height={32}
+                  className="w-8 h-8"
+                />
                 <span className="font-serif text-xl font-bold">WedNest</span>
               </div>
               <p className="text-gray-400 text-sm leading-relaxed mb-6">

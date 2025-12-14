@@ -32,7 +32,7 @@ export const BrowseView = () => {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="bg-[#482822] py-8 md:py-14 px-4 sm:px-6 lg:px-8 shadow-lg relative overflow-hidden"
+        className="bg-[#482822] py-8 md:py-14 px-4 sm:px-6 lg:px-8 shadow-lg relative overflow-hidden texture-overlay"
       >
         <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
         <div className="max-w-7xl mx-auto relative z-10">
@@ -43,10 +43,10 @@ export const BrowseView = () => {
             initial={{ scale: 0.95, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.4 }}
-            className="bg-white p-1.5 rounded-xl shadow-2xl flex flex-col md:flex-row gap-1"
+            className="bg-white p-1.5 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.15)] flex flex-col md:flex-row gap-0"
           >
-            <div className="flex-[2] relative bg-white rounded-lg md:rounded-l-lg md:rounded-r-none overflow-hidden group transition-colors border-b md:border-b-0 md:border-r border-gray-100">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <div className="flex-[2] relative bg-white rounded-lg md:rounded-l-lg md:rounded-r-none overflow-hidden group transition-colors">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5 z-10" />
               <input 
                 type="text" 
                 value={searchText}
@@ -55,14 +55,16 @@ export const BrowseView = () => {
                 className="w-full pl-12 pr-4 py-3 md:py-4 bg-transparent outline-none text-gray-700 placeholder:text-gray-400 font-medium"
               />
               {searchText && (
-                <button onClick={() => setSearchText('')} className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600">
+                <button onClick={() => setSearchText('')} className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 z-10">
                   <X size={16} />
                 </button>
               )}
             </div>
 
-            <div className="flex-1 relative border-b md:border-b-0 md:border-r border-gray-100 bg-white">
-              <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <div className="w-px bg-gray-200 hidden md:block self-stretch my-2"></div>
+
+            <div className="flex-1 relative bg-white">
+              <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5 z-10" />
               <select 
                 value={selectedCity}
                 onChange={(e) => setSelectedCity(e.target.value)}
@@ -71,11 +73,13 @@ export const BrowseView = () => {
                 <option value="">All Cities</option>
                 {CITIES.map(c => <option key={c.name} value={c.name}>{c.name}</option>)}
               </select>
-              <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
+              <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none z-10" />
             </div>
 
-            <div className="flex-1 relative bg-white md:rounded-r-xl">
-              <Utensils className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <div className="w-px bg-gray-200 hidden md:block self-stretch my-2"></div>
+
+            <div className="flex-1 relative bg-white">
+              <Utensils className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5 z-10" />
               <select 
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
@@ -84,8 +88,19 @@ export const BrowseView = () => {
                 <option value="">All Categories</option>
                 {CATEGORIES.map(c => <option key={c.name} value={c.name}>{c.name}</option>)}
               </select>
-              <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
+              <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none z-10" />
             </div>
+
+            <div className="w-px bg-gray-200 hidden md:block self-stretch my-2"></div>
+
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-rose-500 hover:bg-rose-600 text-white rounded-full w-12 h-12 md:w-14 md:h-14 flex items-center justify-center transition-colors shadow-md md:ml-2"
+              aria-label="Search"
+            >
+              <Search size={20} className="text-white" />
+            </motion.button>
           </motion.div>
         </div>
       </motion.div>
@@ -93,17 +108,17 @@ export const BrowseView = () => {
       {/* Category Pills */}
       <div className="sticky top-16 md:top-20 z-30 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm py-3 transition-all">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex gap-3 overflow-x-auto hide-scrollbar px-1 py-1">
+          <div className="flex gap-3 overflow-x-auto hide-scrollbar">
              {CATEGORIES.map(cat => (
                <motion.button
                   key={cat.name}
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05, backgroundColor: selectedCategory !== cat.name ? '#FDF8F5' : undefined }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => setSelectedCategory(selectedCategory === cat.name ? '' : cat.name)}
                   className={`px-5 py-2.5 rounded-full text-sm font-semibold whitespace-nowrap border transition-all flex items-center gap-2 ${
                     selectedCategory === cat.name 
                       ? 'bg-rose-600 text-white border-rose-600 shadow-md' 
-                      : 'bg-white text-gray-600 border-gray-200 hover:border-rose-300'
+                      : 'bg-white text-gray-600 border-gray-200 hover:border-rose-300 hover:bg-rose-50/50'
                   }`}
                >
                  {selectedCategory === cat.name && <Check size={14} />}
@@ -134,6 +149,7 @@ export const BrowseView = () => {
             initial="hidden"
             animate="show"
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+            style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))' }}
           >
             {filteredVendors.map(vendor => (
               <motion.div variants={itemFadeUp} key={vendor.id}>

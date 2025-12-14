@@ -21,6 +21,11 @@ export const metadata: Metadata = {
   description: 'Discover trusted local vendors in Nizamabad, Warangal, and beyond. Verified professionals, transparent pricing. #1 Marketplace for Telangana Tier 2 & 3 Cities.',
   keywords: ['wedding', 'vendors', 'Telangana', 'Nizamabad', 'Warangal', 'wedding planning', 'budget planning'],
   authors: [{ name: 'WedNest' }],
+  icons: {
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+  },
   openGraph: {
     title: 'WedNest | Your Dream Wedding, Within Budget',
     description: 'Discover trusted local vendors in Telangana. Verified professionals, transparent pricing.',
