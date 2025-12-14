@@ -96,8 +96,15 @@ export const BrowseView = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => {
+                // Scroll to results section for better UX
+                const resultsSection = document.getElementById('vendor-results');
+                if (resultsSection) {
+                  resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+              }}
               className="bg-rose-500 hover:bg-rose-600 text-white rounded-full w-12 h-12 md:w-14 md:h-14 flex items-center justify-center transition-colors shadow-md md:ml-2"
-              aria-label="Search"
+              aria-label="Search vendors"
             >
               <Search size={20} className="text-white" />
             </motion.button>
@@ -145,10 +152,11 @@ export const BrowseView = () => {
 
         {filteredVendors.length > 0 ? (
           <motion.div 
+            id="vendor-results"
             variants={containerStagger}
             initial="hidden"
             animate="show"
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+            className="grid gap-6"
             style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))' }}
           >
             {filteredVendors.map(vendor => (

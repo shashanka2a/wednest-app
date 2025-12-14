@@ -56,7 +56,7 @@ export const Header = () => {
             <motion.a 
               href="#"
               whileHover={{ x: 2 }}
-              className="text-gray-500 font-medium text-sm hover:text-rose-600 transition-colors hidden lg:block flex items-center"
+              className="text-gray-500 font-medium text-sm hover:text-rose-600 transition-colors hidden lg:flex items-center"
             >
               List your Business
             </motion.a>
