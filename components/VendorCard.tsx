@@ -46,8 +46,8 @@ export const VendorCard: React.FC<VendorCardProps> = ({ vendor }) => {
             Verified
           </div>
         )}
-        <div className="absolute bottom-3 right-3 bg-white/90 backdrop-blur-sm px-2.5 py-1.5 rounded-lg flex items-center gap-1 text-sm font-bold shadow-md z-10 border border-white/50">
-          <Star size={14} className="text-yellow-500 fill-yellow-500" />
+        <div className="absolute bottom-3 right-3 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-lg flex items-center gap-1.5 text-sm font-bold shadow-md z-10 border border-white/50">
+          <Star size={16} className="text-yellow-500 fill-yellow-500" />
           {vendor.rating} <span className="text-gray-500 font-normal text-xs">({vendor.reviewCount})</span>
         </div>
       </div>
@@ -71,7 +71,7 @@ export const VendorCard: React.FC<VendorCardProps> = ({ vendor }) => {
         {/* Price - decoupled at bottom */}
         <div className="flex items-end justify-between pt-4 border-t border-gray-100 mt-auto">
           <span className="text-xs text-gray-500 font-medium">Starting from</span>
-          <span className="font-bold text-lg text-gray-900">₹{vendor.priceStart.toLocaleString()}</span>
+          <span className="font-bold text-xl text-gray-900">₹{vendor.priceStart.toLocaleString()}</span>
         </div>
       </div>
     </motion.div>

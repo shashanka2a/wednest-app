@@ -13,8 +13,8 @@ export const PopularCities = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-end mb-8">
           <div>
-            <h2 className="text-3xl font-bold text-gray-900">Popular Cities</h2>
-            <p className="text-gray-600 mt-2">Serving Tier-2 and Tier-3 cities across Telangana</p>
+            <h2 className="text-3xl font-bold text-gray-900">Find Vendors in Your City</h2>
+            <p className="text-gray-600 mt-2">From Warangal to Karimnagar, we have verified pros near you.</p>
           </div>
           <motion.button 
             whileHover={{ x: 5 }}
@@ -32,9 +32,9 @@ export const PopularCities = () => {
               <motion.div 
                 whileHover={{ scale: 1.03, y: -5 }}
                 whileTap={{ scale: 0.98 }}
-                className="snap-start shrink-0 w-72 h-48 relative rounded-xl overflow-hidden cursor-pointer group shadow-md hover:shadow-xl transition-all duration-300"
+                className="snap-start shrink-0 w-80 h-64 relative rounded-xl overflow-hidden cursor-pointer group shadow-md hover:shadow-xl transition-all duration-300"
               >
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10" />
                 <Image 
                   src={city.image} 
                   alt={city.name} 

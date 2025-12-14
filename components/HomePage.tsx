@@ -39,18 +39,18 @@ export const HomePage = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 }}
-              className="inline-block py-1 px-3 rounded-full bg-rose-50 text-rose-600 text-sm font-semibold mb-6 border border-rose-100"
+              className="inline-block py-1.5 px-4 rounded-full bg-orange-100 text-orange-700 text-sm font-semibold mb-4 border border-orange-200"
             >
-              #1 Marketplace for Telangana Tier 2 & 3 Cities
+              Telangana's Most Trusted Wedding Network
             </motion.span>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-              Your Dream Wedding, <br />
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-4">
+              Luxury Weddings, <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-rose-700 italic pr-2">
-                Within Budget.
+                Local Prices.
               </span>
             </h1>
-            <p className="text-base md:text-lg text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Discover trusted local vendors in Nizamabad, Warangal, and beyond. Verified professionals, transparent pricing.
+            <p className="text-base md:text-lg text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Discover top-rated venues and trusted vendors in Nizamabad, Warangal, and across Telangana. Transparent pricing, zero hidden fees.
             </p>
 
             {/* Search Widget */}
@@ -82,10 +82,10 @@ export const HomePage = () => {
                 </select>
               </div>
               <motion.button 
-                whileHover={{ scale: 1.02 }}
+                whileHover={{ scale: 1.02, boxShadow: "0 10px 25px rgba(197, 140, 120, 0.4)" }}
                 whileTap={{ scale: 0.98 }}
                 onClick={handleSearch}
-                className="bg-rose-500 hover:bg-rose-600 text-white px-10 py-4 rounded-xl font-bold transition shadow-md whitespace-nowrap text-lg"
+                className="bg-rose-500 hover:bg-rose-600 text-white px-10 py-4 rounded-xl font-bold transition-all shadow-md hover:shadow-lg whitespace-nowrap text-lg"
               >
                 Search
               </motion.button>
@@ -98,12 +98,12 @@ export const HomePage = () => {
       <PopularCities />
 
       {/* Featured Vendors */}
-      <section className="py-20 bg-rose-50/50">
+      <section className="py-20 bg-[#FAFAF9]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-end mb-12">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-3">Popular in Nizamabad</h2>
-              <p className="text-gray-600">Handpicked vendors with the best reviews.</p>
+              <h2 className="text-3xl font-bold text-gray-900 mb-3">Top-Rated Venues in Nizamabad</h2>
+              <p className="text-gray-600">Curated spaces loved by couples, verified for quality and price.</p>
             </div>
             <motion.button 
               whileHover={{ x: 5 }}
@@ -144,9 +144,9 @@ export const HomePage = () => {
               <Wand2 size={20} />
               <span>NEW FEATURE</span>
             </motion.div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 font-sans">Confused about costs?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 font-sans">Stop Guessing. Start Planning.</h2>
             <p className="text-rose-100 text-xl mb-10 leading-relaxed">
-              Use our AI Wedding Planner to get a realistic budget breakdown tailored to Telangana market rates. From venue to catering, we help you plan smarter.
+              Unsure what a wedding in Warangal actually costs? Our AI analyzes real local market rates to give you an accurate breakdown instantly.
             </p>
             <motion.button 
               whileHover={{ scale: 1.05, y: -2 }}
@@ -154,7 +154,7 @@ export const HomePage = () => {
               onClick={() => router.push('/ai')}
               className="bg-white text-rose-900 px-8 py-5 rounded-xl font-bold shadow-lg hover:bg-rose-50 transition flex items-center gap-2 text-lg"
             >
-              <Bot size={24} /> Try AI Budget Planner
+              <Bot size={24} /> Calculate My Budget
             </motion.button>
           </div>
           <div className="md:w-5/12">
