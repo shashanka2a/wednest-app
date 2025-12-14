@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { Search, MapPin, ArrowRight, Wand2, Bot, Instagram, Facebook, Twitter, Mail, Phone } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { PopularCities } from './PopularCities';
+import { CategoriesSection } from './CategoriesSection';
 import { VendorCard } from './VendorCard';
 import { ALL_VENDORS, CITIES, NIZAMABAD_REAL_VENUES } from '../lib/constants';
 import { containerStagger, itemFadeUp } from '../lib/animations';
@@ -50,7 +51,7 @@ export const HomePage = () => {
               </span>
             </h1>
             <p className="text-base md:text-lg text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Discover top-rated venues and trusted vendors in Nizamabad, Warangal, and across Telangana. Transparent pricing, zero hidden fees.
+              Discover top-rated venues and trusted vendors across Telangana. Transparent pricing, zero hidden fees.
             </p>
 
             {/* Search Widget */}
@@ -93,6 +94,9 @@ export const HomePage = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Categories Section */}
+      <CategoriesSection />
 
       {/* Popular Cities */}
       <PopularCities />
