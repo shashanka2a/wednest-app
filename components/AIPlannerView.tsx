@@ -61,7 +61,7 @@ export const AIPlannerView = () => {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: [0, 10, 0], opacity: 1 }}
               transition={{ y: { repeat: Infinity, duration: 6, ease: "easeInOut", delay: 1 }, opacity: { duration: 1, delay: 0.5 } }}
-              className="absolute right-0 lg:-right-12 xl:-right-16 top-10 hidden lg:flex items-center gap-3 bg-white/60 backdrop-blur-md px-4 py-3 rounded-2xl shadow-sm border border-white/50 min-w-[180px]"
+              className="absolute right-0 lg:right-0 xl:right-8 top-10 hidden lg:flex items-center gap-3 bg-white/60 backdrop-blur-md px-4 py-3 rounded-2xl shadow-sm border border-white/50 min-w-[180px]"
            >
               <div className="bg-blue-100 p-2 rounded-full shrink-0"><Wallet size={16} className="text-blue-600" /></div>
               <div className="text-sm min-w-0">
@@ -75,7 +75,7 @@ export const AIPlannerView = () => {
              animate={{ opacity: 1, y: 0 }}
              className="text-center mb-10 px-4 lg:px-8"
            >
-             <h2 className="text-5xl md:text-6xl font-sans font-extrabold text-gray-900 mb-4 tracking-tighter">Plan your dream wedding</h2>
+             <h2 className="text-5xl md:text-6xl font-sans font-bold text-gray-900 mb-4 tracking-tighter">Plan your dream wedding</h2>
              <p className="text-gray-500 text-lg md:text-xl font-light max-w-lg mx-auto">Instant budget breakdowns tailored for Indian Tier-2 cities.</p>
            </motion.div>
 
