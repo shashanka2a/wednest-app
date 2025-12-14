@@ -33,7 +33,7 @@ export const HomePage = () => {
             className="absolute inset-0 bg-cover bg-center"
             style={{
               backgroundImage: 'url(/image.png)',
-              opacity: 0.18,
+              opacity: 0.4,
               filter: 'blur(40px)',
               maskImage: 'radial-gradient(ellipse at center, transparent 30%, black 70%)',
               WebkitMaskImage: 'radial-gradient(ellipse at center, transparent 30%, black 70%)',
