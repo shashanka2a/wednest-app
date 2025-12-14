@@ -43,9 +43,9 @@ export const HomePage = () => {
             >
               Telangana's Most Trusted Wedding Network
             </motion.span>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-4">
+            <h1 className="font-sans text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-4">
               Luxury Weddings, <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-rose-700 italic pr-2">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-rose-700 pr-2">
                 Local Prices.
               </span>
             </h1>
@@ -144,15 +144,15 @@ export const HomePage = () => {
               <Wand2 size={20} />
               <span>NEW FEATURE</span>
             </motion.div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 font-sans">Stop Guessing. Start Planning.</h2>
-            <p className="text-rose-100 text-xl mb-10 leading-relaxed">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 font-sans">Stop Guessing. Start Planning.</h2>
+            <p className="text-rose-100 text-base md:text-lg mb-8 leading-relaxed">
               Unsure what a wedding in Warangal actually costs? Our AI analyzes real local market rates to give you an accurate breakdown instantly.
             </p>
             <motion.button 
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => router.push('/ai')}
-              className="bg-white text-rose-900 px-8 py-5 rounded-xl font-bold shadow-lg hover:bg-rose-50 transition flex items-center gap-2 text-lg"
+              className="bg-white text-rose-900 px-8 py-4 rounded-xl font-bold shadow-lg hover:bg-rose-50 transition flex items-center gap-2 text-base"
             >
               <Bot size={24} /> Calculate My Budget
             </motion.button>
