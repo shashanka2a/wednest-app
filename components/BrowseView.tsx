@@ -139,16 +139,16 @@ export const BrowseView = () => {
                     className={`px-4 py-2.5 rounded-xl text-sm font-semibold whitespace-nowrap border-2 transition-all flex items-center gap-2 ${
                       isSelected 
                         ? 'bg-rose-600 text-white border-rose-600 shadow-md' 
-                        : 'bg-white text-gray-600 border-gray-200 hover:border-rose-300 hover:bg-rose-50/50'
+                        : 'bg-white text-gray-700 border-gray-200 hover:border-rose-300 hover:bg-rose-50/50'
                     }`}
                  >
                    <Icon 
                      icon={iconName} 
                      width={18} 
                      height={18}
-                     className={isSelected ? 'text-white' : 'text-gray-600'}
+                     className={isSelected ? 'text-white' : 'text-gray-700'}
                    />
-                   {cat.name}
+                   <span className={isSelected ? 'text-white' : 'text-gray-700'}>{cat.name}</span>
                  </motion.button>
                );
              })}

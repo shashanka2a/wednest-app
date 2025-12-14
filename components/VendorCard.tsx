@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { Star, MapPin, BadgeCheck } from 'lucide-react';
 import { Vendor } from '../types';
@@ -12,11 +13,17 @@ interface VendorCardProps {
 
 export const VendorCard: React.FC<VendorCardProps> = ({ vendor }) => {
   const [imageError, setImageError] = useState(false);
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push(`/vendor/${vendor.id}`);
+  };
 
   return (
     <motion.div 
       whileHover={{ y: -8, boxShadow: "0 15px 30px -5px rgba(0, 0, 0, 0.1)" }}
       whileTap={{ scale: 0.98 }}
+      onClick={handleClick}
       className="bg-white rounded-xl shadow-sm border border-rose-100 group cursor-pointer h-full flex flex-col overflow-hidden"
     >
       {/* Image Container with strict 4:3 aspect ratio */}

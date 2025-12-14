@@ -42,16 +42,16 @@ export const AIPlannerView = () => {
       </div>
 
       {status === 'idle' || status === 'loading' ? (
-        <div className="w-full max-w-4xl relative z-10">
+        <div className="w-full max-w-4xl relative z-10 px-4 lg:px-8 xl:px-12">
            {/* Floating Widgets */}
            <motion.div 
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: [0, -10, 0], opacity: 1 }}
               transition={{ y: { repeat: Infinity, duration: 5, ease: "easeInOut" }, opacity: { duration: 1 } }}
-              className="absolute -left-12 bottom-20 hidden lg:flex items-center gap-3 bg-white/60 backdrop-blur-md p-3 rounded-2xl shadow-sm border border-white/50"
+              className="absolute left-0 lg:-left-16 xl:-left-20 bottom-20 hidden lg:flex items-center gap-3 bg-white/60 backdrop-blur-md px-4 py-3 rounded-2xl shadow-sm border border-white/50 min-w-[180px]"
            >
-              <div className="bg-green-100 p-2 rounded-full"><Check size={16} className="text-green-600" /></div>
-              <div className="text-sm">
+              <div className="bg-green-100 p-2 rounded-full shrink-0"><Check size={16} className="text-green-600" /></div>
+              <div className="text-sm min-w-0">
                 <p className="font-bold text-gray-800">Venue Found</p>
                 <p className="text-xs text-gray-500">Warangal Fort</p>
               </div>
@@ -61,10 +61,10 @@ export const AIPlannerView = () => {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: [0, 10, 0], opacity: 1 }}
               transition={{ y: { repeat: Infinity, duration: 6, ease: "easeInOut", delay: 1 }, opacity: { duration: 1, delay: 0.5 } }}
-              className="absolute -right-8 top-10 hidden lg:flex items-center gap-3 bg-white/60 backdrop-blur-md p-3 rounded-2xl shadow-sm border border-white/50"
+              className="absolute right-0 lg:-right-12 xl:-right-16 top-10 hidden lg:flex items-center gap-3 bg-white/60 backdrop-blur-md px-4 py-3 rounded-2xl shadow-sm border border-white/50 min-w-[180px]"
            >
-              <div className="bg-blue-100 p-2 rounded-full"><Wallet size={16} className="text-blue-600" /></div>
-              <div className="text-sm">
+              <div className="bg-blue-100 p-2 rounded-full shrink-0"><Wallet size={16} className="text-blue-600" /></div>
+              <div className="text-sm min-w-0">
                 <p className="font-bold text-gray-800">Budget Optimized</p>
                 <p className="text-xs text-gray-500">Saved ₹45,000</p>
               </div>
@@ -73,7 +73,7 @@ export const AIPlannerView = () => {
            <motion.div 
              initial={{ opacity: 0, y: 20 }}
              animate={{ opacity: 1, y: 0 }}
-             className="text-center mb-10"
+             className="text-center mb-10 px-4 lg:px-8"
            >
              <h2 className="text-5xl md:text-6xl font-sans font-extrabold text-gray-900 mb-4 tracking-tighter">Plan your dream wedding</h2>
              <p className="text-gray-500 text-lg md:text-xl font-light max-w-lg mx-auto">Instant budget breakdowns tailored for Indian Tier-2 cities.</p>
