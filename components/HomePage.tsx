@@ -44,7 +44,7 @@ export const HomePage = () => {
             >
               Telangana's Most Trusted Wedding Network
             </motion.span>
-            <h1 className="font-sans text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-4">
+            <h1 className="font-sans text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-4 italic">
               Luxury Weddings, <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-rose-700 pr-2">
                 Local Prices.
