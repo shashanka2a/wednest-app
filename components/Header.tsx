@@ -36,10 +36,9 @@ export const Header = () => {
             >
               <Link href="/ai" className="flex items-center gap-1.5">
                 <Wand2 size={16} className="fill-rose-500/20" />
-                <span className="bg-gradient-to-r from-rose-600 to-rose-500 bg-clip-text text-transparent font-semibold">
+                <span className={`font-semibold ${isActive('/ai') ? 'bg-gradient-to-r from-rose-600 to-rose-500 bg-clip-text text-transparent' : 'text-gray-900'}`}>
                   Plan with AI
                 </span>
-                <span className="text-xs">✨</span>
               </Link>
             </motion.button>
 

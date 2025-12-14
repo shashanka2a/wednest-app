@@ -13,7 +13,7 @@ export const Logo: React.FC<{ className?: string }> = ({ className = "" }) => {
         height={40}
         className="w-10 h-10"
       />
-      <span className="font-serif text-2xl font-bold text-gray-800 tracking-tight">
+      <span className="font-sans text-2xl font-bold text-gray-800 tracking-tight">
         Wed<span className="text-rose-500">nest</span>
       </span>
     </div>

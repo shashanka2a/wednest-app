@@ -14,6 +14,7 @@ const categoryImages: Record<string, string> = {
   'Makeup': 'https://images.unsplash.com/photo-1487412947132-26c5c112a118?auto=format&fit=crop&q=80&w=400',
   'Decor': 'https://images.unsplash.com/photo-1519225421980-715cb0202128?auto=format&fit=crop&q=80&w=400',
   'Catering': 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=400',
+  'Designers': 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=400',
 };
 
 const categoryDescriptions: Record<string, string> = {
@@ -22,6 +23,7 @@ const categoryDescriptions: Record<string, string> = {
   'Makeup': 'Bridal Makeup Artists, Family Makeup',
   'Decor': 'Wedding Planners, Decorators',
   'Catering': 'Veg, Non-Veg, Buffet Service',
+  'Designers': 'Invitations, Posters, Websites',
 };
 
 export const CategoriesSection = () => {
@@ -53,6 +55,7 @@ export const CategoriesSection = () => {
               'bg-rose-50',
               'bg-yellow-50',
               'bg-green-50',
+              'bg-purple-50',
             ];
             const borderColors = [
               'border-blue-200',
@@ -60,6 +63,7 @@ export const CategoriesSection = () => {
               'border-rose-200',
               'border-yellow-200',
               'border-green-200',
+              'border-purple-200',
             ];
 
             return (

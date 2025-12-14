@@ -211,7 +211,7 @@ export const HomePage = () => {
                   height={32}
                   className="w-8 h-8"
                 />
-                <span className="font-serif text-xl font-bold">WedNest</span>
+                <span className="font-sans text-xl font-bold">WedNest</span>
               </div>
               <p className="text-gray-400 text-sm leading-relaxed mb-6">
                 Making dream weddings accessible. The most trusted wedding directory for Telangana's heartland.
@@ -241,7 +241,7 @@ export const HomePage = () => {
             </div>
 
             <div>
-              <h4 className="font-bold text-lg mb-6">Contact Us</h4>
+              <h4 className="font-bold text-lg mb-6">Nizamabad, Telangana</h4>
               <ul className="space-y-4 text-gray-400 text-sm">
                 <li className="flex items-start gap-3">
                   <MapPin size={18} className="mt-0.5 shrink-0" />
