@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-import { Search, MapPin, ArrowRight, Wand2, Bot, Instagram, Facebook, Twitter, Mail, Phone } from 'lucide-react';
+import { Search, MapPin, ArrowRight, Wand2, Bot, Instagram, Facebook, Twitter, Mail, Phone, Star, Home, Camera, Heart } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { PopularCities } from './PopularCities';
 import { CategoriesSection } from './CategoriesSection';
