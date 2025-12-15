@@ -12,7 +12,7 @@ const categoryImages: Record<string, string> = {
   'Venue': 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=400',
   'Photography': 'https://images.unsplash.com/photo-1606103920295-9a091573f160?auto=format&fit=crop&q=80&w=400',
   'Makeup': 'https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&q=80&w=400',
-  'Decor': 'https://images.unsplash.com/photo-1478146896981-b80c463e4381?auto=format&fit=crop&q=80&w=400',
+  'Decor': 'https://www.elegantwedding.ca/wp-content/uploads/2017/09/elegant-wedding-26-outdoor-wedding-decoration-ideas-featured-1.jpg',
   'Catering': 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=400',
   'Designers': 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=400',
 };
